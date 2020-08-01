@@ -5,14 +5,18 @@ h2 {
     font-size: 1rem;
     font-weight: 600;
 }
-.hero1 {
-    background-image: url('images/hero.jpg') no-repeat cover;
-}
-.lead {
-    font-size: 1.1rem;;
-}
 section {
     padding: 2rem;
     max-width: 700px;
     margin: 0 auto;
+}
+.nina-hero {
+    width: 800px;
+    height: 500px;
+    background: url("images/hero.png")no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 20px;
+}
+.lead {
+    font-size: 1.1rem;;
 }
