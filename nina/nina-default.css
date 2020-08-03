@@ -90,36 +90,25 @@ section, footer {
     background-position: 60% -30px;
     background-size: 770px;
 }
-/* .gallery-promo {
-    padding: 0;
-    display: grid;
-    grid-gap: 1px;
-    grid-template-columns: [col-start] auto [col2-start] 100px [col3-start] 20% [col4-start] auto [col5-start] auto [col5-start] auto [col6-start] auto [col7-start] auto [col7-end];
-    grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row3-end];
-    max-width: none;
-    height: 200px;
-    max-width: 1200px;
-    margin-bottom: 3rem;
-} */
 .mosaic {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 1rem;
-  /* background: black; */
-  height: 300px;
-  max-width: 1200px;
-  padding: 0;
-  margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+    /* background: black; */
+    height: 300px;
+    max-width: 1200px;
+    padding: 0;
+    margin-bottom: 60px;
 }
 
 .tile {
-  object-fit: cover;
-  overflow: hidden;
-  background: pink;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    object-fit: cover;
+    overflow: hidden;
+    background: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .tile img {
     opacity: .5;
@@ -131,50 +120,50 @@ section, footer {
 }
 
 .tile:nth-child(1){
-  grid-column: span 1;
-  grid-row: span 1;
-  background: darkolivegreen;
+    grid-column: span 1;
+    grid-row: span 1;
+    background: darkolivegreen;
 }
 .tile:nth-child(2){
-  grid-row-start: 1;
-  grid-row-end: 3;
-  grid-column-start: 2;
-  grid-column-end: 5;
-  background: red;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    background: red;
 }
 .tile:nth-child(3){
-  grid-row: span 3;
-  background: blueviolet;
+    grid-row: span 3;
+    background: blueviolet;
 }
 .tile:nth-child(4){
-  grid-column: span 1;
-  grid-row: span 2;
-  background: darkorange;
+    grid-column: span 1;
+    grid-row: span 2;
+    background: darkorange;
 }
 .tile:nth-child(5){
-  grid-column: span 1;
-  background: yellowgreen;
+    grid-column: span 1;
+    background: yellowgreen;
 }
 .tile:nth-child(6){
-  grid-row-start: 3;
-  grid-column-start: 4;
-  background: brown;
+    grid-row-start: 3;
+    grid-column-start: 4;
+    background: brown;
 }
 .tile:nth-child(7){
-  grid-column: span 3;
-  background: navy;
+    grid-column: span 2;
+    background: navy;
 }
 .tile:nth-child(8){
-    grid-column: span 3;
-    background: navy;
-  }
+    grid-column: span 1;
+    background: green;
+}
 .tile:nth-last-child(1){
-  grid-column: span 1;
-  background: var(--accent);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column-start: 6;
+    grid-column: span 1;
+    background: var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 6;
 }
 .tile a {
     color: white;
