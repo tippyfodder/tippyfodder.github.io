@@ -164,6 +164,10 @@ section, footer {
   grid-column: span 3;
   background: navy;
 }
+.tile:nth-child(8){
+    grid-column: span 3;
+    background: navy;
+  }
 .tile:nth-last-child(1){
   grid-column: span 1;
   background: var(--accent);
@@ -174,6 +178,23 @@ section, footer {
 }
 .tile a {
     color: white;
+}
+@media only screen and (max-width: 600px) {
+    .mosaic {
+        height: 300px;
+        grid-gap: 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 100%;
+    }
+    .tile:nth-child(1), .tile:nth-child(2), .tile:nth-child(3), .tile:nth-child(4), .tile:nth-child(5), .tile:nth-child(6), .tile:nth-child(7), .tile:nth-child(8) {
+        grid-row-start: auto;
+        grid-row-end: auto;
+        grid-column-start: auto;
+        grid-column-end: auto;
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 }
 
 
