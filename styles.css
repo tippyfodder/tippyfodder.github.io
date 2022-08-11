@@ -28,9 +28,7 @@ body {
     max-height: 25rem;
     
   }
-  .slides img[src$=".png"] {
-    filter: grayscale(.5);
-  }
+
   
   .txt {
     height: 25rem;
@@ -92,6 +90,16 @@ body {
     -webkit-animation: gray-ani 10s ease forwards;
             animation: gray-ani 10s ease forwards;
   }
+
+  .shake {
+    animation: shake .1s linear infinite;
+  }
+  .bump {
+    animation: bump 1s ease infinite;
+  }
+  .brown {
+    animation: go-brown 3s ease forwards;
+  }
   
   @-webkit-keyframes gray-ani {
     0% {
@@ -108,5 +116,32 @@ body {
     }
     100% {
       filter: grayscale(1);
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(2px);
+    }
+    100% {
+      transform: translate();
+    }
+  }
+
+  @keyframes bump {
+    0% {
+      transform: scale(1.01)
+    }
+    100% {
+      transform: scale();
+    }
+  }
+
+  @keyframes go-brown {
+    0% {
+      filter: sepia(0);
+    }
+    100% {
+      filter: sepia(1);
     }
   }
