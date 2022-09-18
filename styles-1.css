@@ -23,10 +23,13 @@ body {
   
   img, .txt {
     width: 25rem;
+    height: 25rem;
     display: flex;
     border-radius: 1rem;
-    max-height: 25rem;
-    
+    margin: 0 auto;
+  }
+  img {
+    object-fit: cover;
   }
 
   
