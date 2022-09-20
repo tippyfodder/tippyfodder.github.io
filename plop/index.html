@@ -9,7 +9,7 @@
   <link rel="manifest" href="/assets/fav/site.webmanifest">
 
   <!-- HTML Meta Tags -->
-  <title>plopbuff</title>
+  <title>Plop Culture</title>
   <meta name="description" content="Two NFT collections trolling from different angles.">
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://tippyfodder.github.io/plopcult">
@@ -70,7 +70,7 @@
           <li><a href=""><img src="../images/pc11.jpg" alt="artwork thumbnail"></a></li>
           <li><a href=""><img src="../images/pc12.jpg" alt="artwork thumbnail"></a></li>
         </ul>
-        <div class="p p-6 m m-4"><button class="button is-medium">More on Foundation</button></div>
+        <div class="p p-6 m m-4"><a href="https://foundation.app/collection/plop?sortOrder=DEFAULT" class="button is-medium">View on Foundation</a></div>
       </div>
     </section>
     <div id="context" style="background:white;">
@@ -97,12 +97,13 @@
     <div id="details" style="background:rgb(255, 83, 106);">
       <div class="container">
         <div class="content section is-medium">
-          <h2 class="title is-3">Project details - I'm just in it for the money</h2>
+          <h2 class="title is-3">Project details - Proly a rug</h2>
           <p>This project consists of an unknown number of 1/1 NFTs by Tippy Fodder.</p>
             <p>Wen mint? - Not sure, probably pretty soon.</p>
             <p>How much? - Mostly free except for the really expensive ones.</p>
-            <p>How many? - Dunno, I'll stop when I get bored.</p>
-          <p>If you have any feedback, love, or hate, hit me up on twitter @tippyfodder.</p>
+            <p>How many? - Dunno, I'll stop when I get bored.</p> 
+            <p>How often? - Expect regular updates.</p>
+          <p>If you have any feedback, love, or hate, hit me up on twitter <a href="https://twitter.com/tippyfodder">@tippyfodder</a>.</p>
         </div>
         <div class="hand">
           <img src="images/plop-hand.png" width="100" alt="">
@@ -118,5 +119,12 @@
     </div>
   </div>
 </body>
-
+<script>
+$(function() {
+  $('#small_image img').on('click', function() {
+    var url = $(this).attr('src');
+    $('#big_image img').attr('src', url);
+  })
+})
+</script>
 </html>
