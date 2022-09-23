@@ -27,14 +27,15 @@ body {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    opacity: .1;
+    opacity: .5;
     &:hover {
         opacity: 1;
     }
 }
 
-.box {
-    text-align: center;
+.modal {
+    font-size: 1.2rem;
+    // text-align: center;
 }
 
 .timeline .hours {
