@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/assets/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/fav/favicon-16x16.png"> -->
+    <link rel="manifest" href="/assets/fav/site.webmanifest">
+
+    <!-- HTML Meta Tags -->
+    <title>Timeline</title>
+    <meta name="description" content="This is my line it tells time.">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://tippyfodder.github.io/timeline">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="/timeline">
+    <meta property="og:description" content="This is my line it tells time.">
+    <meta property="og:image" content="/timeline/og-timeline.png">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="tippyfodder.github.io">
+    <meta property="twitter:url" content="https://tippyfodder.github.io/timeline">
+    <meta name="twitter:title" content="/timeline">
+    <meta name="twitter:description" content="This is my line it tells time.">
+    <meta name="twitter:image" content="/timeline/og-timeline.png">
+    <link rel="stylesheet" href="https://cozyview.netlify.app/css/cozystyles.css">
+    <link rel="stylesheet" href="../timeline/tl.css">
+</head>
+
+<body>
+    <div class="timeline">
+        <div class="hours"></div>
+    </div>
+    <button class="info" onclick="isActive1()">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="13" cy="13" r="11.5" stroke="black" stroke-width="3"/>
+            <path d="M13 12L13 19" stroke="black" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="13" cy="7" r="2" fill="black"/>
+            </svg>            
+    </button>
+
+    <div id="modal_1" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box is-3 subtitle">This is my line, it tells the time.</div>
+        </div>
+        <button class="modal-close is-large" aria-label="close" onclick="isActive1()"></button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        function setClock() {
+            var time = new Date(),
+                minutes = time.getMinutes() * 6,
+                hours = time.getHours() % 12 / 12 * 360 + (minutes / 12),
+                seconds = time.getSeconds() * 6;
+
+            $(".hours").css("transform", "rotate(" + hours + "deg)");
+            $(".seconds").css("transform", "rotate(" + seconds + "deg)");
+            $(".minutes").css("transform", "rotate(" + minutes + "deg)");
+        }
+        function refresh() {
+            setClock();
+            setTimeout(refresh, 1000);
+        }
+        refresh();
+
+        function isActive1() {
+            document.getElementById("modal_1").classList.toggle("is-active");
+        }
+    </script>
+</body>
+
+</html>
