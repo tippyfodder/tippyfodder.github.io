@@ -3,7 +3,19 @@ body {
     overflow: hidden;
     display: flex;
     align-items: center;
-    background: lightgreen;
+    background: skyblue;
+    animation: bg-color 420s linear infinite;
+}
+@keyframes bg-color {
+    0% {
+        filter: hue-rotation(0)saturate(.3);
+    }
+    50% {
+        filter: hue-rotate(360deg)saturate(5)brightness(.2);
+    }
+    100% {
+        filter: hue-rotation(0)saturate(.3);
+    }
 }
 
 .timeline {
@@ -11,16 +23,11 @@ body {
     margin: 0 auto;
 }
 
-.info {
-    cursor: pointer;
+.buttons {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: transparent;
-    border-color: transparent;
-    padding: .32rem;
-    opacity: .2;
-
+    opacity: .1;
     &:hover {
         opacity: 1;
     }
