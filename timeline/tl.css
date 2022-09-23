@@ -27,9 +27,13 @@ body {
   position: absolute;
   top: 1rem;
   right: 1rem;
+}
+.buttons .button {
+  background: transparent;
+  border-color: black;
   opacity: 0.5;
 }
-.buttons:hover {
+.buttons .button:hover {
   opacity: 1;
 }
 

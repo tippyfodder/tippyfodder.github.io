@@ -6,13 +6,16 @@ body {
     background: skyblue;
     animation: bg-color 420s linear infinite;
 }
+
 @keyframes bg-color {
     0% {
         filter: hue-rotation(0)saturate(.3);
     }
+
     50% {
         filter: hue-rotate(360deg)saturate(5)brightness(.2);
     }
+
     100% {
         filter: hue-rotation(0)saturate(.3);
     }
@@ -27,9 +30,13 @@ body {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    opacity: .5;
-    &:hover {
-        opacity: 1;
+    .button {
+        background: transparent;
+        border-color: black;
+        opacity: .5;
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 

@@ -41,9 +41,8 @@
         <div class="modal-background"></div>
         <div class="modal-content">
             <div class="box content">
-                <h3>Context</h3>
-                <p>This is my line - now it tells the hour - now it changes color</p>
-                <p>Expect updates.</p>
+                <h3>Timeline for an agile line</h3>
+                <p>This is my line - now it tells the hour - now it changes color.</p>
             </div>
         </div>
         <button class="modal-close is-large" aria-label="close" onclick="isActive1()"></button>
@@ -72,39 +71,39 @@
         }
 
         let myDocument = document.documentElement;
-let btn = document.getElementById("fullscreen");
-btn.addEventListener("click", ()=>{
-    if(btn.textContent == "Fullscreen"){
-        if (myDocument.requestFullscreen) {
-            myDocument.requestFullscreen();
-        } 
-        else if (myDocument.msRequestFullscreen) {
-            myDocument.msRequestFullscreen();
-        } 
-        else if (myDocument.mozRequestFullScreen) {
-            myDocument.mozRequestFullScreen();
-        }
-        else if(myDocument.webkitRequestFullscreen) {
-            myDocument.webkitRequestFullscreen();
-        }
-        btn.textContent = "Exit fullscreen";
-    }
-    else{
-        if(document.exitFullscreen) {
-            document.exitFullscreen();
-        }
-        else if(document.msexitFullscreen) {
-            document.msexitFullscreen();
-        }
-        else if(document.mozexitFullscreen) {
-            document.mozexitFullscreen();
-        }
-        else if(document.webkitexitFullscreen) {
-            document.webkitexitFullscreen();
-        }
-        btn.textContent = "Fullscreen";
-    }
-});
+        let btn = document.getElementById("fullscreen");
+        btn.addEventListener("click", () => {
+            if (btn.textContent == "Fullscreen") {
+                if (myDocument.requestFullscreen) {
+                    myDocument.requestFullscreen();
+                }
+                else if (myDocument.msRequestFullscreen) {
+                    myDocument.msRequestFullscreen();
+                }
+                else if (myDocument.mozRequestFullScreen) {
+                    myDocument.mozRequestFullScreen();
+                }
+                else if (myDocument.webkitRequestFullscreen) {
+                    myDocument.webkitRequestFullscreen();
+                }
+                btn.textContent = "Exit fullscreen";
+            }
+            else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+                else if (document.msexitFullscreen) {
+                    document.msexitFullscreen();
+                }
+                else if (document.mozexitFullscreen) {
+                    document.mozexitFullscreen();
+                }
+                else if (document.webkitexitFullscreen) {
+                    document.webkitexitFullscreen();
+                }
+                btn.textContent = "Fullscreen";
+            }
+        });
     </script>
 </body>
 
