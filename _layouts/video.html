@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/{{ page.css }}">
+
+    <!-- Fav icons  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tippyfodder.github.io/assets/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tippyfodder.github.io/assets/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://tippyfodder.github.io/assets/fav/favicon-16x16.png">
+    <link rel="manifest" href="https://tippyfodder.github.io/assets/fav/site.webmanifest">
+
+    <!-- HTML Meta Tags -->
+    <meta name="description" content="{{ page.description }}Random artworks by by @TippyFodder.">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="{{ page.url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:image" content="{{ page.ogimage }}">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="{{ page.domain }}">
+    <meta property="twitter:url" content="{{ page.url }}">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:image" content="{{ page.ogimage }}">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-88PZYG06TD"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-88PZYG06TD');
+</script>
+
+<body>
+    
+        <div class="section is-flex is-medium is-justify-content-center">
+            {{ content }}
+        </div>
+
+        <script src="/js/main.js"></script>
+</body>
+</html>
