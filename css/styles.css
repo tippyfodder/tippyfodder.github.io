@@ -29,7 +29,7 @@ body, .title, .subtitle, p, .button {
 
 main {
   display: grid;
-  min-height: calc(100vh - 120px); }
+  min-height: calc(100vh - 50px); }
 
 * {
   max-width: 100%;
