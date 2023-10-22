@@ -1,31 +1,68 @@
 ---
-layout: default-1
+layout: basic
 title: Projects by @tippyfodder
 class: landing
 ---
 
-<main  onclick="plusDivs(-1)">
-    <section class="section is-primary hero is-medium">
-        <div class="container is-fluid">
-            <div class="">
-                {% include hero-images.html folder="/images/hero/" %}
+<main>
+    <section class="home-hero">
+        <div id="next_image" class="is-square">
+            <div id="image-container">
+                <img width="720" id="displayed-image" src="/images/trans.png">
             </div>
-            <div class="">
-                <div>
-                    <h1 class="title is-3 is-spaced">
-                        <span class="is-nowrap">tippyfodder.</span><span class="is-nowrap">github.io</span>
-                    </h1>
-                    <div class="buttons pt pt-2">
-                        <a href="https://twitter.com/almostrealchris" class="button is-rounded">Twitter</a>
-                        <a href="https://codepen.io/tippyfodder" class="button is-rounded">CodePen</a>
-                        <a href="https://github.com/tippyfodder" class="button is-rounded">GitHub</a>
-                    </div>
-                </div>
+            <div class="controls">
+                <div id="previous"></div>
+                <div id="next"></div>
+            </div>
+        </div>
+        <div>
+            <h1>@tippyfodder</h1>
+            <p>Recent work from <span class="no-wrap">Chris Johnson,</span><br>Product Designer, Front-end Developer and Artist</p>
+            <div class="buttons">
+                <a href="" class="button">Twitter</a>
+                <a href="" class="button">Codepen</a>
+                <a href="" class="button">Github</a>
             </div>
         </div>
     </section>
-    <!-- {% include list-projects.html %} -->
+    <section class="is-lane" style="--accent-500: #f2a900; --text: #000;">
+        <div class="image"><img src="/images/xrpcafe_01.png" alt=""></div>
+        <div class="desc">
+            <h2>xrp.cafe</h2>
+            <em>Strategy, UX, UI, Visual Design</em>
+            <p>How we made the most popular NFT marketplace on the XRPL.</p>
+            <a class="button" href="xrpcafe">Details</a>
+            <!-- <a class="button" href="https://xrp.cafe/" target="_blank">Open app</a> -->
+        </div>
+    </section>
+    <section class="is-lane" style="--accent-500: #e50054; --text: #fff;">
+        <div class="image"><img src="/images/diagonals_01.png" alt=""></div>
+        <div class="desc">
+            <h2>the Diagonals</h2>
+            <em>Illustration, Research</em>
+            <p>An experiment to better understand the needs of creators, and have a little fun in the process.</p>
+            <a class="button" href="/diagonals/">Details</a>
+        </div>
+    </section>
+    <section class="is-lane" style="--accent-500: #00d33f; --text: #000;">
+        <div class="image"><img src="/images/apex_01.png" alt=""></div>
+        <div class="desc">
+            <h2>Apex POA experience</h2>
+            <em>UX, UI, Visual Design, Illustration</em>
+            <p>The XRPL foundation asked us to create an proof of attendance app with an accompanying NFT collection. </p>
+            <a class="button">Soon</a>
+        </div>
+    </section>
+    <section class="is-lane" style="--accent-500: #2c48c4; --text: #ffffff;">
+        <div class="image"><img src="/images/ms_01.png" alt=""></div>
+        <div class="desc">
+            <h2>Microsoft Learn</h2>
+            <em>UX, Design Systems, Rapid Prototyping</em>
+            <p>Learning simplified with novel solutions and a dynamic system for lessons. </p>
+            <a class="button">Soon</a>
+        </div>
+    </section>
+    
 </main>
-<footer class="p p-3 has-background-primary">
-    &copy; tippyfodder.github.io
-</footer>
+
+<script src="/js/scripts.js"></script>
