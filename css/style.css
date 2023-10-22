@@ -573,13 +573,14 @@ img {
   .swiper .swiper-button-next:after, .swiper .swiper-button-prev:after {
     color: red;
     content: ''; }
-  .swiper .swiper-button-next {
-    inset: 0 0 0 50%;
-    width: 50%;
-    height: 100%; }
-  .swiper .swiper-button-prev {
-    inset: 0 50% 0 0;
-    width: 50%;
-    height: 100%; }
+  @media only screen and (min-width: 680px) {
+    .swiper .swiper-button-next {
+      inset: 0 0 0 50%;
+      width: 50%;
+      height: 100%; }
+    .swiper .swiper-button-prev {
+      inset: 0 50% 0 0;
+      width: 50%;
+      height: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

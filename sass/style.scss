@@ -338,18 +338,21 @@ img {
     color: red;
     content: '';
   }
-  .swiper-button-next {
-    inset: 0 0 0 50%;
-    // background: pink;
-    width: 50%;
-    height: 100%;
+  @media only screen and (min-width: 680px) {
+    .swiper-button-next {
+      inset: 0 0 0 50%;
+      // background: pink;
+      width: 50%;
+      height: 100%;
+    }
+    .swiper-button-prev {
+      inset: 0 50% 0 0;
+      // background: red;
+      width: 50%;
+      height: 100%;
+    }
   }
-  .swiper-button-prev {
-    inset: 0 50% 0 0;
-    // background: red;
-    width: 50%;
-    height: 100%;
-  }
+  
   // * {
   //   margin: 0;
   // }
