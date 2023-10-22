@@ -77,8 +77,16 @@ class: landing
 <script>
     const swiper = new Swiper('.swiper', {
         // Optional parameters
+        lazy: true,
+        autoHeight: true,
+        speed: 100,
         direction: 'horizontal',
         loop: true,
+
+        autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        },
     
         // If we need pagination
         // pagination: {

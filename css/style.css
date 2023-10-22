@@ -552,7 +552,10 @@ img {
   object-fit: cover; }
 
 .samples {
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 .swiper {
   width: 100%;
