@@ -49,9 +49,11 @@ main {
 .home-hero {
   display: grid;
   grid-template-columns: auto;
+  grid-template-rows: min-content;
   place-items: center;
   background: var(--accent-500);
   color: #fff;
+  overflow: hidden;
   @media only screen and (min-width: 680px) {
     grid-template-columns: auto minmax(20rem, 1fr);
   }
@@ -69,6 +71,10 @@ main {
     //   display: grid;
     //   grid-template-columns: 1fr 1fr;
     // }
+  }
+  .image-container {
+    overflow: hidden;
+    aspect-ratio: 1/1;
   }
   .controls {
     position: absolute;
@@ -306,4 +312,45 @@ img {
   >div {
     // padding: 1.5rem;
   }
+}
+
+
+.samples {
+  overflow: hidden;
+}
+.swiper {
+  width: 100%;
+  // width: calc(100% - 2rem);
+  height: 100vw;
+  max-width: 100%;
+  margin: 0;
+  aspect-ratio: 1/1;
+  @media only screen and (min-width: 680px) {
+    width: 40vw;
+    height: 40vw;
+  }
+  @media only screen and (min-width: 1800px) {
+    width: 720px;
+    height: 720px;
+  }
+  .swiper-button-next:after, .swiper-button-prev:after {
+    // opacity: 0;
+    color: red;
+    content: '';
+  }
+  .swiper-button-next {
+    inset: 0 0 0 50%;
+    // background: pink;
+    width: 50%;
+    height: 100%;
+  }
+  .swiper-button-prev {
+    inset: 0 50% 0 0;
+    // background: red;
+    width: 50%;
+    height: 100%;
+  }
+  // * {
+  //   margin: 0;
+  // }
 }

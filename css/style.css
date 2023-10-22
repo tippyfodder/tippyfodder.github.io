@@ -360,9 +360,11 @@ main {
 .home-hero {
   display: grid;
   grid-template-columns: auto;
+  grid-template-rows: min-content;
   place-items: center;
   background: var(--accent-500);
-  color: #fff; }
+  color: #fff;
+  overflow: hidden; }
   @media only screen and (min-width: 680px) {
     .home-hero {
       grid-template-columns: auto minmax(20rem, 1fr); } }
@@ -374,6 +376,9 @@ main {
       grid-template-columns: auto minmax(40rem, 1fr); } }
   .home-hero #next_image {
     position: relative; }
+  .home-hero .image-container {
+    overflow: hidden;
+    aspect-ratio: 1/1; }
   .home-hero .controls {
     position: absolute;
     inset: 0;
@@ -547,5 +552,34 @@ img {
 
 .is-square img {
   object-fit: cover; }
+
+.samples {
+  overflow: hidden; }
+
+.swiper {
+  width: 100%;
+  height: 100vw;
+  max-width: 100%;
+  margin: 0;
+  aspect-ratio: 1/1; }
+  @media only screen and (min-width: 680px) {
+    .swiper {
+      width: 40vw;
+      height: 40vw; } }
+  @media only screen and (min-width: 1800px) {
+    .swiper {
+      width: 720px;
+      height: 720px; } }
+  .swiper .swiper-button-next:after, .swiper .swiper-button-prev:after {
+    color: red;
+    content: ''; }
+  .swiper .swiper-button-next {
+    inset: 0 0 0 50%;
+    width: 50%;
+    height: 100%; }
+  .swiper .swiper-button-prev {
+    inset: 0 50% 0 0;
+    width: 50%;
+    height: 100%; }
 
 /*# sourceMappingURL=style.css.map */

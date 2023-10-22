@@ -6,13 +6,22 @@ class: landing
 
 <main>
     <section class="home-hero">
-        <div id="next_image" class="is-square">
-            <div id="image-container">
-                <img width="720" id="displayed-image" src="/images/sample_images/1.png">
-            </div>
-            <div class="controls">
-                <div id="previous"></div>
-                <div id="next"></div>
+        <div id="next_image-" class="samples">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    {% for file in site.static_files %}
+                    {% if file.path contains 'images/sample_images' and file.extname contains '.jpg' or file.extname contains '.jpeg' or file.extname contains '.png' or file.extname contains '.gif' or file.extname contains '.webp' %}
+                    <div class="swiper-slide"><img class="displayed-image" src="{{ file.path }}" alt="{{ file.name }}"></div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
         <div>
@@ -65,5 +74,30 @@ class: landing
     </section>
     
 </main>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+    
+        // If we need pagination
+        // pagination: {
+        // el: '.swiper-pagination',
+        // },
+    
+        // Navigation arrows
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+    
+        // And if we need scrollbar
+        // scrollbar: {
+        // el: '.swiper-scrollbar',
+        // },
+    });
+
+</script>
 
 <script src="/js/scripts.js"></script>
