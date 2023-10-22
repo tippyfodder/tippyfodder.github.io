@@ -374,8 +374,6 @@ main {
   @media only screen and (min-width: 1200px) {
     .home-hero {
       grid-template-columns: auto minmax(40rem, 1fr); } }
-  .home-hero #next_image {
-    position: relative; }
   .home-hero .image-container {
     overflow: hidden;
     aspect-ratio: 1/1; }
