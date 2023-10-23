@@ -102,6 +102,7 @@ p {
   display: grid;
   background: var(--accent-500);
   color: var(--text);
+  place-items: center;
   // padding: .75rem; 
   @media only screen and (min-width: 680px) {
     grid-template-columns: 1fr 1fr;
@@ -121,13 +122,20 @@ p {
   .desc {
     max-width: 30rem;
     padding: 1.5rem; 
-    margin-right: 2rem;
+    // margin-right: 2rem;
+    @media only screen and (max-width: 680px) {
+      width: 100%;
+    }
     @media only screen and (min-width: 1000px) {
       margin-right: 6rem;
     }
     .button {
       display: inline-flex;
       margin: 0.75rem 0;
+      @media only screen and (max-width: 680px) {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
   .image {

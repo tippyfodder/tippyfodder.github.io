@@ -404,7 +404,8 @@ p {
 .is-lane {
   display: grid;
   background: var(--accent-500);
-  color: var(--text); }
+  color: var(--text);
+  place-items: center; }
   @media only screen and (min-width: 680px) {
     .is-lane {
       grid-template-columns: 1fr 1fr;
@@ -419,14 +420,20 @@ p {
     font-size: 1.1rem; }
   .is-lane .desc {
     max-width: 30rem;
-    padding: 1.5rem;
-    margin-right: 2rem; }
+    padding: 1.5rem; }
+    @media only screen and (max-width: 680px) {
+      .is-lane .desc {
+        width: 100%; } }
     @media only screen and (min-width: 1000px) {
       .is-lane .desc {
         margin-right: 6rem; } }
     .is-lane .desc .button {
       display: inline-flex;
       margin: 0.75rem 0; }
+      @media only screen and (max-width: 680px) {
+        .is-lane .desc .button {
+          display: flex;
+          justify-content: center; } }
   .is-lane .image {
     max-width: 700px;
     padding: 3rem 3rem 0 3rem; }
