@@ -415,7 +415,8 @@ p {
     margin: 0.5rem 0; }
   .is-lane em {
     font-weight: bold;
-    opacity: .6; }
+    opacity: .6;
+    font-style: normal; }
   .is-lane em, .is-lane p {
     font-size: 1.1rem; }
   .is-lane .desc {
