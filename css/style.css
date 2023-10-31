@@ -441,6 +441,42 @@ p {
       .is-lane .image {
         padding: 10%; } }
 
+.is-group {
+  display: grid;
+  background: darkgray; }
+  @media only screen and (min-width: 400px) {
+    .is-group {
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 50%)); } }
+  @media only screen and (min-width: 800px) {
+    .is-group {
+      grid-template-columns: repeat(auto-fit, minmax(4rem, 25%)); } }
+  .is-group p, .is-group em {
+    font-size: .875em;
+    margin: 0; }
+  .is-group em {
+    margin-block: .25rem;
+    display: block; }
+  .is-group h2 {
+    font-size: 1.25em;
+    margin: 1rem 0 0; }
+  .is-group img {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 1rem; }
+  .is-group .group-card {
+    background: var(--accent-500);
+    text-decoration: none;
+    text-align: center;
+    color: var(--text);
+    width: 100%;
+    padding: 12% 10% 5%; }
+    .is-group .group-card:hover {
+      filter: brightness(1.1); }
+    .is-group .group-card .desc, .is-group .group-card .image {
+      margin: 0;
+      padding: 0; }
+    .is-group .group-card .desc {
+      min-height: 7rem; }
+
 .post-hero {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -542,6 +578,9 @@ footer {
   footer .back {
     position: relative;
     inset: auto; }
+
+.is-hidden {
+  display: none; }
 
 .no-wrap {
   white-space: nowrap; }
