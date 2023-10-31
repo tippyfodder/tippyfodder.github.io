@@ -454,7 +454,8 @@ p {
       grid-template-columns: repeat(auto-fit, minmax(4rem, 25%)); } }
   .is-group p, .is-group em {
     font-size: .875em;
-    margin: 0; }
+    margin: 0;
+    text-wrap: pretty; }
   .is-group em {
     margin-block: .25rem;
     display: block; }
