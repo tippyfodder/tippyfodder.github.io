@@ -42,7 +42,7 @@ body {
 
 main {
   position: relative;
-  max-width: 2000px;
+  max-width: 1800px;
   margin-inline: auto;
 }
 
@@ -156,7 +156,7 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 50%));
   }
   @media only screen and (min-width: 800px) {
-    grid-template-columns: repeat(auto-fit, minmax(4rem, 25%));
+    grid-template-columns: repeat(auto-fit, minmax(4rem, 33.33333333%));
   }
   p, em {
     font-size: .875em;
@@ -190,7 +190,13 @@ p {
       padding: 0;
     }
     .desc {
-      min-height: 7rem; 
+      // margin-bottom: 1rem;
+    }
+    @media only screen and (min-width: 400px) and (max-width: 1500px) {
+      .desc {
+        min-height: 5.75rem; 
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -286,6 +292,7 @@ p {
 }
 
 // Common 
+
 .back {
   position: absolute;
   inset: 1.5rem auto auto 1.5rem;
@@ -313,7 +320,7 @@ p {
 
 footer {
   background: var(--accent-500);
-  max-width: 2000px;
+  max-width: 1800px;
   margin-inline: auto;
   padding: 3rem 2rem;
   

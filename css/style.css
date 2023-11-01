@@ -354,7 +354,7 @@ body {
 
 main {
   position: relative;
-  max-width: 2000px;
+  max-width: 1800px;
   margin-inline: auto; }
 
 .home-hero {
@@ -451,7 +451,7 @@ p {
       grid-template-columns: repeat(auto-fit, minmax(10rem, 50%)); } }
   @media only screen and (min-width: 800px) {
     .is-group {
-      grid-template-columns: repeat(auto-fit, minmax(4rem, 25%)); } }
+      grid-template-columns: repeat(auto-fit, minmax(4rem, 33.33333333%)); } }
   .is-group p, .is-group em {
     font-size: .875em;
     margin: 0;
@@ -477,8 +477,10 @@ p {
     .is-group .group-card .desc, .is-group .group-card .image {
       margin: 0;
       padding: 0; }
-    .is-group .group-card .desc {
-      min-height: 7rem; }
+    @media only screen and (min-width: 400px) and (max-width: 1500px) {
+      .is-group .group-card .desc {
+        min-height: 5.75rem;
+        margin-bottom: 0; } }
 
 .post-hero {
   display: grid;
@@ -575,7 +577,7 @@ p {
 
 footer {
   background: var(--accent-500);
-  max-width: 2000px;
+  max-width: 1800px;
   margin-inline: auto;
   padding: 3rem 2rem; }
   footer .back {

@@ -1,0 +1,621 @@
+
+
+
+// Common 
+.section.is-medium svg {
+    max-width: 40rem;
+    margin-inline: auto;
+    margin: 7% auto;
+}
+.section {
+    border-bottom: 4px solid var(--neutral-900);
+    background: white;
+    text-align: center;
+    &.is-medium {
+      padding: 3rem 2rem;
+    }
+}
+.is-flex {
+    display: flex; 
+    gap: 2rem;
+    &.is-wrap {
+        flex-wrap: wrap;
+    }
+}
+.is-center {
+    margin-inline: auto;
+    justify-content: center;
+}
+.note { 
+    margin-block: 3rem;
+    font-weight: 600;
+}
+footer {
+    max-width: 100%;
+}
+
+
+// ## Painter 
+// Red box
+.custom .paint {
+    stroke: #DA0A00;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 75;
+  }
+  .custom.active .paint {
+    stroke-dashoffset: 25;
+  }
+  // Brush
+  .custom {
+    .brush {
+      transform-origin: 50% 30%;
+    }
+    &.active .brush {
+      transform: rotate(350deg);
+      transform-origin: 20% 20%;
+    }
+  }
+  // Color boxes
+  .custom {
+    .yellow, .white {
+      transform: translateX(400%);
+      opacity: 0;
+    }
+    .blue, .white:nth-child(odd) {
+      transform: translateX(-400%);
+      opacity: 0;
+    }
+    &.active .yellow, &.active .blue, &.active .white {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  // Transitions
+  .custom, .yellow, .blue, .white, .custom .brush {
+    transition: all .8s cubic-bezier(.93,-0.31,.24,1.29);
+  }
+  .custom .paint {
+    transition: all .8s cubic-bezier(.52,.11,.46,.97);
+  }
+  
+
+  
+// ## Robot
+
+
+.marker {
+    transform: translate(10px, 130px);
+    display:none;
+  }
+  /*transitions*/
+  svg, .body, .arm-right, .magnet, .spine, .shdw-1 {
+    transition: all .7s cubic-bezier(.94,0,1,1);
+  }
+  .arm-left, .arm-right {
+    transition: all 1.5s ease;
+  }
+  
+//   body {
+//     font-family: Segoe UI, Helvetica, Arial, sans-serif;
+//     padding: 75px;
+//     font-size: 16px;
+//   }
+  p {
+    display: block;
+    text-align: center;
+    margin: 50px 0;
+  }
+  svg {
+    display: block;
+    transition: all .3s ease;
+    overflow: visible;
+  /*   width: 200px;
+    height: 200px;
+    margin: 0 auto; */
+  }
+  
+  /* robot */
+  .robot {
+    transition: all .7s ease-in;
+  }
+  #bot.activate .robot {
+    transform:translateX(10px);
+  }
+  
+  /*body*/
+  .body {
+    transform-origin: 95px 100px;
+    transform: rotate(-58deg) translate(-57px, -39px );
+  }
+  .spine {
+    stroke: black;
+    stroke-width: 30;
+    stroke-dasharray: 2, 0;
+  }
+  #bot.activate .spine {
+    stroke-dasharray: 5, 3;
+    stroke-dashoffset: -10;
+  }
+  .arm-right {
+    transform-origin: 130px 180px;
+    transform: translate(0) rotate(95deg);
+  }
+  .arm-left {
+    transform-origin: 60px 80px;
+    transform: translate(32px, 10px) rotate(-150deg);
+  }
+  #bot.activate .body, #bot.activate .arm-right, #bot.activate .arm-left {
+    transform: translate(0);
+  }
+  
+  /* eyebrow */
+  .brow-right {
+    transition: all 4s ease;
+    transform-origin: 20px 20px;
+    transform: translate(-10px);
+  }
+  #bot.activate .brow-right {
+    animation: brow 1s ease infinite alternate;
+    animation-delay: .7s;
+  }
+  
+  /*shadows*/
+  .shdw-1 {
+    stroke: #eee;
+    stroke-dasharray: 130;
+    stroke-dashoffset: -20;
+  }
+  #bot.activate .shdw-1 {
+    stroke-dasharray: 220;
+    stroke-dashoffset: -40;
+  }
+  
+  /* magnet */
+  .magnet .mag {
+    animation: magnabounce 1s alternate infinite ease-in-out;
+  }
+  .magnet {
+    transform: translateX(80px) translateY(0px);
+  }
+  #bot.activate .magnet {
+    transform: translateX(0) translateY(0px);
+  }
+  #bot.activate .mag {
+    animation: none;
+  }
+  
+  .panel {
+    stroke: #FCB713;
+    stroke-width: 10;
+    stroke-dasharray: 4;
+    stroke-dashoffset: 1;
+  }
+  #bot.activate .panel {
+    animation: panel .8s alternate infinite ease-in-out;
+    animation-delay:.7s;
+  }
+  
+  /* animations */
+  @keyframes intro {
+    to {
+      transform: translateY(50px);
+    }
+  }
+  
+  @keyframes magnastay {
+    to {
+      transform: translateY();
+    }
+  }
+  @keyframes panel {
+    0% {
+      stroke-dashoffset: 0%;
+    }
+    50% {
+      stroke-dashoffset: 20%;
+    }
+    100% {
+      stroke-dashoffset: 0%;
+    }
+  }
+  @keyframes stuck {
+    0% {
+    }
+    100% {
+      transform: translateX(50px);
+    }
+  }
+  @keyframes brow {
+    to {
+      transform: translate(50px);
+    }
+  }
+  @keyframes title {
+    to {
+      opacity: 1;
+    }
+  }
+
+
+
+  // ## Progress
+  .module-img .pro-ring, .path-img .pro-ring, .award-img .pro-ring {
+    stroke: dodgerblue;
+    stroke-width: 6px;
+    fill: none;
+}
+
+
+// Variation 4
+$neutral: #56616f;
+$accent: #0050c5;
+$highlight: #673ab7;
+$success: #008863;
+$info:#00bcf2;
+$caution: #E85B3F;
+$error: #94141a;
+
+
+// Accent shades
+$accent-90: darken($accent, 30%);
+$accent-80: darken($accent, 20%);
+$accent-70: darken($accent, 10%);
+$accent-60: darken($accent, 5%);
+$accent-50: $accent;
+$accent-40: lighten($accent, 10%);
+$accent-30: lighten($accent, 25%);
+$accent-20: lighten($accent, 35%);
+$accent-10: lighten($accent, 52%);
+
+.accent {background:$accent}
+.accent-90 {background:$accent-90}
+.accent-80 {background:$accent-80}
+.accent-70 {background:$accent-70}
+.accent-60 {background:$accent-60}
+.accent-50 {background:$accent-50}
+.accent-40 {background:$accent-40}
+.accent-30 {background:$accent-30}
+.accent-20 {background:$accent-20}
+.accent-10 {background:$accent-10}
+
+
+// Neutral shades
+
+$neutral-90: darken($neutral, 30%);
+$neutral-80: darken($neutral, 20%);
+$neutral-70: darken($neutral, 10%);
+$neutral-60: darken($neutral, 5%);
+$neutral-50: $neutral;
+$neutral-40: lighten($neutral, 10%);
+$neutral-30: lighten($neutral, 20%);
+$neutral-20: lighten($neutral, 30%);
+$neutral-10: lighten($neutral, 50%);
+$neutral-05: lighten($neutral, 60%);
+
+.neutral {background:$neutral}
+.neutral-90 {background:$neutral-90}
+.neutral-80 {background:$neutral-80}
+.neutral-70 {background:$neutral-70}
+.neutral-60 {background:$neutral-60}
+.neutral-50 {background:$neutral-50}
+.neutral-40 {background:$neutral-40}
+.neutral-30 {background:$neutral-30}
+.neutral-20 {background:$neutral-20}
+.neutral-10 {background:$neutral-10}
+
+// Highlight shades
+$highlight-90: darken($highlight, 35%);
+$highlight-80: darken($highlight, 23%);
+$highlight-70: darken($highlight, 10%);
+$highlight-60: darken($highlight, 5%);
+$highlight-50: $highlight;
+$highlight-40: lighten($highlight, 10%);
+$highlight-30: lighten($highlight, 20%);
+$highlight-20: lighten($highlight, 30%);
+$highlight-10: lighten($highlight, 42%);
+
+.highlight {background:$highlight}
+.highlight-90 {background:$highlight-90}
+.highlight-80 {background:$highlight-80}
+.highlight-70 {background:$highlight-70}
+.highlight-60 {background:$highlight-60}
+.highlight-50 {background:$highlight-50}
+.highlight-40 {background:$highlight-40}
+.highlight-30 {background:$highlight-30}
+.highlight-20 {background:$highlight-20}
+.highlight-10 {background:$highlight-10}
+
+// Success shades
+$success-90: darken($success, 17%);
+$success-80: darken($success, 12%);
+$success-70: darken($success, 7%);
+$success-60: darken($success, 3%);
+$success-50: $success;
+$success-40: desaturate(lighten($success, 20%), 60%);
+$success-30: desaturate(lighten($success, 33%), 60%);
+$success-20: desaturate(lighten($success, 50%), 50%);
+$success-10: desaturate(lighten($success, 60%), 50%);
+
+// desaturate(lighten($success, 50%), 10%)
+
+.success {background:$success}
+.success-90 {background:$success-90}
+.success-80 {background:$success-80}
+.success-70 {background:$success-70}
+.success-60 {background:$success-60}
+.success-50 {background:$success-50}
+.success-40 {background:$success-40}
+.success-30 {background:$success-30}
+.success-20 {background:$success-20}
+.success-10 {background:$success-10}
+
+// info shades
+$info-90: darken($info, 30%);
+$info-80: darken($info, 20%);
+$info-70: darken($info, 10%);
+$info-60: darken($info, 5%);
+$info-50: $info;
+$info-40: lighten($info, 10%);
+$info-30: lighten($info, 20%);
+$info-20: lighten($info, 30%);
+$info-10: lighten($info, 45%);
+
+.info {background:$info}
+.info-90 {background:$info-90}
+.info-80 {background:$info-80}
+.info-70 {background:$info-70}
+.info-60 {background:$info-60}
+.info-50 {background:$info-50}
+.info-40 {background:$info-40}
+.info-30 {background:$info-30}
+.info-20 {background:$info-20}
+.info-10 {background:$info-10}
+
+// Caution shades
+$caution-90: darken($caution, 30%);
+$caution-80: darken($caution, 20%);
+$caution-70: darken($caution, 10%);
+$caution-60: darken($caution, 5%);
+$caution-50: $caution;
+$caution-40: lighten($caution, 7%);
+$caution-30: lighten($caution, 20%);
+$caution-20: lighten($caution, 30%);
+$caution-10: lighten($caution, 35%);
+
+.caution {background:$caution}
+.caution-90 {background:$caution-90}
+.caution-80 {background:$caution-80}
+.caution-70 {background:$caution-70}
+.caution-60 {background:$caution-60}
+.caution-50 {background:$caution-50}
+.caution-40 {background:$caution-40}
+.caution-30 {background:$caution-30}
+.caution-20 {background:$caution-20}
+.caution-10 {background:$caution-10}
+
+// Error shades
+$error-90: darken($error, 24%);
+$error-80: darken($error, 18%);
+$error-70: darken($error, 9%);
+$error-60: darken($error, 5%);
+$error-50: $error;
+$error-40: desaturate(lighten($error, 20%), 10%);
+$error-30: lighten($error, 35%);
+$error-20: lighten($error, 45%);
+$error-10: lighten($error, 55%);
+
+
+
+.error {background:$error}
+.error-90 {background:$error-90}
+.error-80 {background:$error-80}
+.error-70 {background:$error-70}
+.error-60 {background:$error-60}
+.error-50 {background:$error-50}
+.error-40 {background:$error-40}
+.error-30 {background:$error-30}
+.error-20 {background:$error-20}
+.error-10 {background:$error-10}
+
+$hover: $accent-40;
+$link: $accent;
+$visited: $accent-70;
+$text: $neutral-90;
+$border-color-light: $neutral-10;
+
+
+
+
+$margin-lg: 5%;
+$margin-med: 1.2rem;
+$margin-sml: .6rem;
+$margin-xs: .3rem;
+
+$padding-lg: 5%;
+$padding-med: 1.2rem;
+$padding-sml: .6rem;
+$padding-xs: .3rem;
+
+$stroke-med: 1.2rem;
+$stroke-sml: .6rem;
+$stroke-xs: .3rem;
+$stroke-xxs: 1px;
+
+.stroke-med {border:$stroke-med solid $neutral}
+.stroke-sml {border:$stroke-sml solid $neutral}
+.stroke-xs {border:$stroke-xs solid $neutral}
+.stroke-xxs{border:$stroke-xxs solid $neutral}
+
+$base-color: $neutral-70;
+
+
+
+
+.flip-container, .badge {
+  border-radius: 50%;
+}
+.badge {
+  width: 156px;
+  margin: 5%;
+  margin-bottom: 0; 
+  align-self: center;
+  display: block;
+  svg {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 100%;
+    background: white;
+  }
+  h3 {
+    text-transform: uppercase;
+    text-align: center;
+    color: $base-color;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10px 0;
+  }
+}
+
+// Common
+.bg-1{fill:white;stroke:$base-color;stroke-width:15;stroke-miterlimit:10;} 
+
+// Alien
+.sky{fill:#26cfff;} 
+.eyes {fill:white;} 
+.fc-st3{fill:$base-color;} 
+.fc-st4{fill:white;} 
+.fc-st5{fill:none;stroke:$base-color;stroke-width:11.286;stroke-linecap:round;stroke-miterlimit:10;} 
+.ship {
+  transition: all .3s ease;
+  transform-origin: 50% 50%;
+}
+svg:hover .ship {
+  transform: rotate(-20deg);
+}
+.lights {
+  fill:none;
+  stroke: white;
+  stroke-dasharray: 5px, 20px;
+  stroke-width:6.7714;
+  stroke-linecap:round;
+  stroke-miterlimit:10;
+}
+.first-contact.play {
+  .lights {
+    animation: light-bar 3s linear infinite;
+  }
+  .ship {
+    animation: ship-fly 3s ease infinite;
+  }
+  .eyes {
+    animation: blink 5s linear infinite;
+    animation-delay: 1s;
+  }
+}
+@keyframes light-bar {
+  0%   { stroke-dasharray: 5px, 20px; }
+  50%  { stroke-dashoffset: 300px; }
+  100% { stroke-dasharray: 5px, 20px; }
+}
+@keyframes ship-fly {
+  0% { transform: rotate(-20deg); }
+  50% { transform: rotate(20deg); }
+  100% { transform: rotate(-20deg); }
+}
+@keyframes blink {
+  0% {}
+  1% {
+    fill: transparent;
+    stroke: white;
+  }
+  3% {
+    fill: white;
+    stroke: transparent;
+  }
+  100% {}
+}
+
+// Ninja
+.st0 {fill:none;stroke:$base-color;stroke-width:15;stroke-miterlimit:10;} 
+.st1 {clip-path:url(#mask);} 
+.head {fill:$base-color;} 
+.eye-slot {fill:#FFFFFF;} 
+.eyes {}
+.mouth {fill:none;stroke:#FFFFFF;stroke-width:6;stroke-miterlimit:10;}
+
+.ninja-status.play {
+  .eyes {
+    animation: eye-move 4s ease infinite;
+  }
+  .eye-slot {
+    animation: slot-move 4s ease infinite;
+  }
+  .mouth {
+    transform-origin: 150px 150px;
+    animation: mouth-move 4s ease infinite;
+  }
+  .bust {
+    transform-origin: 140px 70px;
+    animation: bust-move 4s ease infinite;
+  }
+}
+.ninja-status.play .eye-slot {
+  animation: slot-move 4s ease infinite;
+}
+@keyframes eye-move {
+  5% {transform: translateX(60px)}
+  49% {transform: translateX(60px)}
+}
+@keyframes slot-move {
+  5% {transform: translateX(-20px)}
+  49% {transform: translateX(-20px)}
+}
+@keyframes mouth-move {
+  5% {transform: rotate(20deg) translate(20px); stroke-dasharray: 50px 50px; stroke-dashoffset: 20px;}
+  49% {transform: rotate(20deg) translate(20px); stroke-dasharray: 50px 50px; stroke-dashoffset: 20px;}
+  100% { stroke-dasharray: 50px 50px; stroke-dashoffset: 2px;}
+}
+@keyframes bust-move {
+  5% {transform: rotate(30deg) translate(20px)}
+  49% {transform: rotate(30deg) translate(20px)}
+}
+
+// Hero character
+.h-st0{fill:$highlight-30;} 
+.h-st1{fill:none;stroke:$base-color;stroke-width:15;stroke-miterlimit:10;} 
+.h-st2{fill:#FFFFFF;} 
+.h-st3{fill:$base-color;} 
+.h-st4{fill:none;stroke:$base-color;stroke-width:7;stroke-miterlimit:10;} 
+.cape{fill:none;stroke:$base-color;stroke-width:12;stroke-miterlimit:10;} 
+.h-st6{fill:none;stroke:$base-color;stroke-width:12.6533;stroke-miterlimit:10;}
+ 
+.helpful-hero.play .cape {
+  animation: cape-move .8s cubic-bezier(.02,.29,.05,.91) infinite;
+}
+.cape-trim {
+  fill:$base-color;
+  stroke-width:11;
+  stroke-miterlimit:10;
+  transform-origin: 50% 0;
+} 
+.play .h-st3 {
+  animation: trim-move .8s ease infinite;
+}
+.play .cape-trim {
+  animation: capetrim-move .8s ease infinite;
+}
+
+
+@keyframes cape-move {
+  80% {transform: translateY(-8px)}
+}
+@keyframes trim-move {
+  50% {transform: translateY(2px)}
+}
+@keyframes capetrim-move {
+  50% {transform: scaleX(1.5)}
+}
+
+
+
