@@ -630,7 +630,7 @@ img {
       inset: 0 0 0 50%;
       width: 50%;
       height: 100%; }
-      .swiper .swiper-button-next :focus-visible {
+      .swiper .swiper-button-next:focus-visible {
         outline: none; }
     .swiper .swiper-button-prev {
       inset: 0 50% 0 0;

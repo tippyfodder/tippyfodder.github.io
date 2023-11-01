@@ -382,7 +382,7 @@ img {
       inset: 0 0 0 50%;
       width: 50%;
       height: 100%;
-      :focus-visible {
+      &:focus-visible {
         outline: none;
       }
     }
