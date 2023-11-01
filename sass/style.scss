@@ -181,7 +181,7 @@ p {
     text-align: center;
     color: var(--text);
     width: 100%;
-    padding: 12% 10% 5%;
+    padding: 10% 10% 5%;
     &:hover {
       filter: brightness(1.1);
     }
@@ -382,6 +382,9 @@ img {
       inset: 0 0 0 50%;
       width: 50%;
       height: 100%;
+      :focus-visible {
+        outline: none;
+      }
     }
     .swiper-button-prev {
       inset: 0 50% 0 0;

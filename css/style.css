@@ -471,7 +471,7 @@ p {
     text-align: center;
     color: var(--text);
     width: 100%;
-    padding: 12% 10% 5%; }
+    padding: 10% 10% 5%; }
     .is-group .group-card:hover {
       filter: brightness(1.1); }
     .is-group .group-card .desc, .is-group .group-card .image {
@@ -630,6 +630,8 @@ img {
       inset: 0 0 0 50%;
       width: 50%;
       height: 100%; }
+      .swiper .swiper-button-next :focus-visible {
+        outline: none; }
     .swiper .swiper-button-prev {
       inset: 0 50% 0 0;
       width: 50%;
