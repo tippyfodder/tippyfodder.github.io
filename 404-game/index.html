@@ -1,0 +1,27 @@
+---
+layout: project
+title:  404 game
+date:   2023-10-31
+categories: game
+permalink: /404-game/
+css: heros
+---
+
+<link rel="stylesheet" href="/404-game/styles/index.processed.css" />
+<script src="js/phaser.min.js"></script>
+<script src="js/main.js"></script>
+
+{% include back-link.html %}
+  <div id="game-wrap" class="game-wrap">
+    <div id="game-cover" class="game-cover">
+      <div class="cover-char"></div>
+      <h3>Play</h3>
+    </div>
+    <div class="game-menu">
+      <img src="images/404-icon-keys.svg" width="60px" alt="" style="display: inline-block;">
+      <p>Use arrow keys to play.</p>
+    </div>
+    <div id="game"></div>
+  </div>
+  <div class="game-footer"></div>
+</body>

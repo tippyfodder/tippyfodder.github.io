@@ -554,6 +554,7 @@ p {
     opacity: .8; }
 
 .back {
+  z-index: 2;
   position: absolute;
   inset: 1.5rem auto auto 1.5rem;
   display: flex;
@@ -583,6 +584,12 @@ footer {
     position: relative;
     inset: auto; }
 
+@media only screen and (max-width: 1440px) {
+  .mobile-only-video {
+    display: block !important; }
+
+  #result_div {
+    display: none; } }
 .is-hidden {
   display: none; }
 

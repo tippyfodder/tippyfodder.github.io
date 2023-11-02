@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+canvas {
+  margin: 0 auto;
+}
+
+body {
+  background: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+a {
+  color: #0050c5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  color: white;
+  padding: 8px 12px;
+  background: #0050c5;
+}
+
+.btn:hover {
+  background: #0065f8;
+  text-decoration: none;
+}
+
+header {
+  height: 100px;
+  background: url(../images/temp-header.png) top center/1317px 100px, url(../images/temp-header-tile.png);
+  background-repeat: no-repeat, repeat-x;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 42px;
+}
+
+.four {
+  display: none;
+}
+
+@media only screen and (max-width: 960px) {
+  .game-wrap, .game-footer {
+    display: none;
+  }
+  .four {
+    display: inline-block;
+  }
+}
+
+.game-wrap {
+  font-size: 18px;
+  margin: 0 auto;
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+  background: white;
+  position: relative;
+}
+
+.game-wrap.game-play {
+  margin-top: 0;
+}
+
+.game-footer {
+  background: white;
+  color: white;
+  height: 55px;
+}
+
+.game-footer > div {
+  width: 90%;
+  max-width: 1320px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.game-footer a {
+  display: none;
+  cursor: pointer;
+  padding: 16px;
+  color: white;
+}
+
+.game-cover {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -480px;
+  width: 960px;
+  height: 546px;
+  opacity: 1;
+  background: url(../images/404-cover.png);
+}
+
+.game-cover h3 {
+  transition: all .3s ease;
+  position: absolute;
+  top: 200px;
+  left: 392px;
+  width: 160px;
+  text-align: center;
+  color: #2F2F2F;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.game-cover .cover-char {
+  transition: all .3s ease;
+  position: absolute;
+  top: 282px;
+  left: 389px;
+  width: 42px;
+  height: 43px;
+  background: url(../images/404-cover-char.svg);
+}
+
+.game-cover:hover {
+  cursor: pointer;
+}
+
+.game-cover:hover .cover-char {
+  transform: translateX(31px) rotate(12deg);
+}
+
+.game-cover:hover h3 {
+  opacity: 1;
+}
+
+.game-menu {
+  position: absolute;
+  bottom: -300px;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+  text-align: center;
+  padding: 30px;
+  background: white;
+}
+
+.game-wrap:hover + .game-footer span {
+  opacity: 1;
+}
+
+.error-msg {
+  width: 90%;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 50px 15px;
+}
+
+.error-msg h1 {
+  margin-top: 0;
+}
+
+.error-msg ul {
+  list-style: none;
+  padding: 0;
+}
+
+.error-msg p {
+  font-size: 1.3rem;
+}
+
+.error-msg li {
+  padding: 6px 0;
+}
+
+.error-msg .links {
+  margin: 30px 0;
+}
+
+.game-play + .error-msg {
+  transform: translateY();
+}
+
+.game-play {
+  transition: .3s ease;
+  background: #C2F2F8;
+  height: 546px;
+}
+
+.game-play .game-cover {
+  animation: remove-cover .5s ease;
+  /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
+}
+
+.game-play .game-menu {
+  animation: game-menu 3s ease;
+}
+
+.game-play + .game-footer a {
+  display: inline-block;
+}
+
+@keyframes remove-cover {
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes game-menu {
+  0% {
+  }
+  10% {
+    transform: translateY(-290px);
+  }
+  90% {
+    transform: translateY(-290px);
+  }
+  100% {
+    transform: translateY();
+  }
+}
+
+footer {
+  color: white;
+  background: #2f2f2f;
+}
+
+#footer {
+  margin-top: 0;
+  border: 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  padding: 48px 0 53px;
+}
+
+#footer .container {
+  padding: 0 5%;
+}
+
+#footer .links {
+  margin-bottom: 16px;
+  margin-top: 0;
+  float: right;
+}
+
+#footer .links > li {
+  display: inline-block;
+  margin-left: .2em;
+  margin-right: 0;
+}
+
+#footer .links {
+  font-size: .8125rem;
+}
+
+#footer .links a {
+  color: #3d88c0;
+}
+
+#footer select {
+  display: inline-block;
+  overflow: auto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 30px 0 6px;
+  vertical-align: middle;
+  height: 28px;
+  border: 1px solid #e3e3e3;
+  font-size: .75rem;
+  line-height: 16px;
+  outline: 0;
+  text-overflow: ellipsis;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
