@@ -579,7 +579,9 @@ footer {
   background: var(--accent-500);
   max-width: 1800px;
   margin-inline: auto;
-  padding: 3rem 2rem; }
+  padding: 3rem 2rem;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5); }
   footer .back {
     position: relative;
     inset: auto; }
@@ -590,6 +592,23 @@ footer {
 
   #result_div {
     display: none; } }
+@media only screen and (min-width: 1820px) {
+  main {
+    padding-inline: .75rem; }
+
+  .back {
+    margin-left: 0.75rem; }
+
+  footer {
+    max-width: 1765px; }
+
+  main footer {
+    max-width: 1800px; }
+
+  section:not(.image-grid), footer:not(.image-grid) {
+    margin-block: 1rem;
+    border-radius: 2rem;
+    overflow: hidden; } }
 .is-hidden {
   display: none; }
 

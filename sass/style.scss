@@ -46,6 +46,8 @@ main {
   margin-inline: auto;
 }
 
+
+
 .home-hero {
   display: grid;
   grid-template-columns: auto;
@@ -323,7 +325,8 @@ footer {
   max-width: 1800px;
   margin-inline: auto;
   padding: 3rem 2rem;
-  
+  text-align: right;
+  color: rgba($color: #000000, $alpha: .5);
   .back {
     position: relative;
     inset: auto;
@@ -341,7 +344,28 @@ footer {
   }
   
 }
-
+@media only screen and (min-width: 1820px) {
+  main {
+    padding-inline: .75rem;
+  }
+  .back {
+    margin-left: 0.75rem; 
+}
+  footer {
+    max-width: 1765px;
+  }
+  main footer {
+    max-width: 1800px;
+  }
+  section, footer {
+    &:not(.image-grid) {
+      margin-block: 1rem;
+      border-radius: 2rem;
+      overflow: hidden;
+      // margin-inline: .5rem;
+    }
+  }
+}
 .is-hidden {
   display: none;
 }
