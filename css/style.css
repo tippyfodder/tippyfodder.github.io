@@ -532,7 +532,7 @@ p {
     margin-inline: auto;
     padding: 2rem; }
     .article .is-content .button {
-      margin: 4rem auto; }
+      margin: 2rem auto; }
     .article .is-content img {
       margin: 4rem 0 4rem; }
 
@@ -592,7 +592,7 @@ footer {
 
   #result_div {
     display: none; } }
-@media only screen and (min-width: 1820px) {
+@media only screen and (min-width: 1800px) {
   main {
     padding-inline: .75rem; }
 
