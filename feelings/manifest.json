@@ -5,7 +5,7 @@
     "start_url": "/feelings/",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#e91e63",
+    "theme_color": "#000",
     "orientation": "portrait",
     "scope": "/feelings/",
     "icons": [
@@ -23,5 +23,5 @@
       "src": "sw.js",
       "scope": "/feelings/"
     }
-  }
+}
   
