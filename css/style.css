@@ -471,7 +471,8 @@ p {
     text-align: center;
     color: var(--text);
     width: 100%;
-    padding: 10% 10% 5%; }
+    padding: 10% 10% 5%;
+    height: 100%; }
     .is-group .group-card:hover {
       filter: brightness(1.1); }
     .is-group .group-card .desc, .is-group .group-card .image {

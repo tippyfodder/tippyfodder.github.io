@@ -46,11 +46,11 @@ function fetchXRPPrice() {
             // Price has gone down more than 2%
             priceWrapElement.classList.add("is-more-red");
             break;
-            case priceChangePercentage > 1:
+            case priceChangePercentage > .01:
             // Price has gone up more than 1%
             priceWrapElement.classList.add("is-green");
             break;
-            case priceChangePercentage < -1:
+            case priceChangePercentage < -.01:
             // Price has gone down more than 1%
             priceWrapElement.classList.add("is-red");
         }
