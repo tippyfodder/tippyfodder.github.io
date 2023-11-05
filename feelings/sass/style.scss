@@ -39,6 +39,12 @@ body {
       background-size: auto 100%;
       background-position-x: 0;
     }
+
+    &.is-bear {
+      .image {
+        // background-image:  url("../images/feelings-bear.webp");
+      }
+    }
   
     &.is-extra-red {
       background: red;

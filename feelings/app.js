@@ -52,31 +52,33 @@ function fetchXRPPrice() {
           htmlElement.classList.add("is-psyop");
         }
   
-        // Update the displayed price without the dollar sign in the #price element
+        // Update the displayed price 
         priceElement.textContent = currentPrice.toFixed(3);
       })
       .catch(error => {
         console.error('Error fetching XRP price:', error);
       });
   }
+document.getElementById("price-wrap").addEventListener("click", function () {
+    const htmlElement = document.documentElement; 
+    htmlElement.classList.toggle("is-bear");
+});
+
   
-  // Fetch XRP price and apply classes on page load
   fetchXRPPrice();
-  
-  // Fetch XRP price and apply classes periodically
   setInterval(fetchXRPPrice, 60000); // Fetch every 60 seconds (adjust as needed)
   
-    // ## PWA install 
-    // Check if the browser supports the 'beforeinstallprompt' event
-    if ('BeforeInstallPromptEvent' in window) {
-      window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault(); // Prevent the default browser prompt
-        const installButton = document.getElementById('installButton');
-        installButton.style.display = 'block';
-  
-        installButton.addEventListener('click', () => {
-          e.prompt(); // Show the installation prompt to the user
-          installButton.style.display = 'none';
-        });
-      });
-    }
+// ## PWA install 
+// Check if the browser supports the 'beforeinstallprompt' event
+if ('BeforeInstallPromptEvent' in window) {
+    window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault(); // Prevent the default browser prompt
+    const installButton = document.getElementById('installButton');
+    installButton.style.display = 'block';
+
+    installButton.addEventListener('click', () => {
+        e.prompt(); // Show the installation prompt to the user
+        installButton.style.display = 'none';
+    });
+    });
+}
