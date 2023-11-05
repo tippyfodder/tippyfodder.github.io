@@ -24,7 +24,7 @@ html {
     width: 100%;
     max-width: 40rem;
     aspect-ratio: 1 / 1;
-    background: rgba(0, 0, 0, 0.2) url("https://assets.codepen.io/130015/feelings.png");
+    background: rgba(0, 0, 0, 0.2) url("../images/feelings.webp");
     border-radius: 1rem;
     background-repeat: no-repeat;
     background-size: auto 100%;
