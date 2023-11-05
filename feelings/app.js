@@ -1,5 +1,9 @@
 function fetchXRPPrice() {
-    fetch('https://api.coingecko.com/api/v3/coins/ripple/market_chart?vs_currency=usd&days=1')
+    // Create a timestamp to serve as a cache-busting parameter
+    const timestamp = new Date().getTime();
+    const apiUrl = `https://api.coingecko.com/api/v3/coins/ripple/market_chart?vs_currency=usd&days=1&_=${timestamp}`;
+  
+    fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
         const priceData = data.prices;
