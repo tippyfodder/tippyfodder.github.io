@@ -1,0 +1,97 @@
+---
+layout: project
+title: Peace Button
+date: 2023-11-17
+categories: art
+permalink: /peace
+css: projects
+---
+
+<!-- <link rel="stylesheet" href="https://cozyview.netlify.app/css/cozystyles.css"> -->
+<style>
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    position: relative;
+    margin-top: 1rem;
+    cursor: not-allowed;
+    transition: all 0.5s ease;
+    left: 0;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 419px) {
+  .button {
+    &.shake {
+      animation: shake .3s ease forwards;
+    }
+  }
+  .input:valid + .button {
+    animation: none;
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .move-right {
+    left: 10rem;
+  }
+  .ok .move-right {
+    left: 0;
+  }
+}
+
+@keyframes shake {
+  0% {
+    left: 0rem;
+  }
+  30% {
+    left: 5rem;
+  }
+  60% {
+    left: -2rem;
+  }
+  100% {
+    left: 0rem;
+  }
+}
+</style>
+
+<main>
+    <div class="">
+        <button id="button-run" class="button" onmouseenter="move()" onclick="shake()">Peace</button> 
+    </div>
+</main>
+<script>
+     
+function move() {
+  var element = document.getElementById("button-run");
+  element.classList.toggle("move-right");
+}
+// function shake() {
+//   var element = document.getElementById("button-run");
+//   element.classList.toggle("shake");
+// }
+
+function shake() {
+    var button = document.getElementById('button-run');
+
+    // Add the .shake class to initiate the animation
+    button.classList.add('shake');
+
+    // Listen for the 'animationend' event
+    button.addEventListener('animationend', function () {
+      // Remove the .shake class when the animation is done
+      button.classList.remove('shake');
+    }, {once: true});
+  }
+
+</script>

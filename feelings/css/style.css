@@ -1,8 +1,7 @@
 body {
   margin: 0;
   background: transparent;
-  display: grid;
-  /* padding: 0 1rem; */ }
+  display: grid; }
 
 html {
   background: black;
@@ -13,7 +12,7 @@ html {
   height: 100dvh;
   font-family: 'Playpen Sans', sans-serif; }
   html #price {
-    font-size: clamp(6rem, 18rem, 6rem);
+    font-size: clamp(4rem, 18rem, 4rem);
     padding: 2rem; }
   html .install {
     display: grid;
