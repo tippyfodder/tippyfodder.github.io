@@ -4,140 +4,18 @@ title: Projects by @tippyfodder
 class: landing
 ---
 
-<main>
-    <section class="home-hero">
-        <div class="samples">
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    {% for file in site.static_files %}
-                    {% if file.path contains 'images/sample_images' and file.extname contains '.jpg' or file.extname contains '.jpeg' or file.extname contains '.png' or file.extname contains '.gif' or file.extname contains '.webp' %}
-                    <div class="swiper-slide"><img class="displayed-image" src="{{ file.path }}" alt="{{ file.name }}"></div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </div>
-        <div>
-            <h1>@tippyfodder</h1>
-            <p>Recent work from <span class="no-wrap">Chris Johnson,</span><br>Product Designer, Front-end Developer and Artist</p>
-            <div class="buttons">
-                <a href="https://twitter.com/AlmostRealChris" class="button">Twitter</a>
-                <a href="https://codepen.io/tippyfodder" class="button">Codepen</a>
-                <a href="https://github.com/tippyfodder" class="button">Github</a>
-            </div>
-        </div>
-    </section>
-    <section class="is-lane" style="--accent-500: #f2a900; --text: #000;">
-        <div class="image"><img src="/images/xrpcafe_01.webp" alt=""></div>
-        <div class="desc">
-            <h2>xrp.cafe</h2>
-            <em>Strategy, UX, UI, Visual Design</em>
-            <p>How we made the most popular NFT marketplace on the XRPL.</p>
-            <a class="button" href="xrpcafe">Read more</a>
-        </div>
-    </section>
-    <section class="is-lane" style="--accent-500: #e50054; --text: #fff;">
-        <div class="image"><img src="/images/diagonals_01.png" alt=""></div>
-        <div class="desc">
-            <h2>the Diagonals</h2>
-            <em>Illustration, Research</em>
-            <p>An experiment to better understand the needs of creators, and have a little fun in the process.</p>
-            <a class="button" href="/thediagonals">Read more</a>
-        </div>
-    </section>
-    <!-- <section class="is-lane is-hidden" style="--accent-500: #00d33f; --text: #000;">
-        <div class="image"><img src="/images/apex_01.png" alt=""></div>
-        <div class="desc">
-            <h2>Apex POA experience</h2>
-            <em>UX, UI, Visual Design, Illustration</em>
-            <p>The XRPL foundation asked us to create a proof of attendance app with an accompanying NFT collection. </p>
-            <a class="button">Read more</a>
-        </div>
-    </section> -->
-    <section class="is-group is-lane">
-        <a href="https://xrp.cafe/collection/hands" target="_blank" class="group-card" style="--accent-500: #197ac7; --text: #000;">
-            <div class="image"><img src="/images/thumb-hands.webp" alt=""></div>
-            <div class="desc">
-                <h2>I Have Hands</h2>
-                <em>NFT collection</em>
-                <!-- <p>Hands doing interesting things on the XRPL.</p> -->
-            </div>
-        </a>
-        <a href="https://xrp.cafe/collection/arms" target="_blank" class="group-card" style="--accent-500: #b74253; --text: #000;">
-            <div class="image"><img src="/images/thumb-arms.webp" alt=""></div>
-            <div class="desc">
-                <h2>Strange Arms</h2>
-                <em>NFT collection</em>
-                <!-- <p>These Knights have very strange arms indeed.</p> -->
-            </div>
-        </a>
-        <a href="/feelings" class="group-card" style="--accent-500: #2cc466; --text: #000;">
-            <div class="image"><img src="/images/thumb-feelings.webp" alt=""></div>
-            <div class="desc">
-                <h2>Feelings</h2>
-                <em>Mini app</em>
-                <!-- <p>The current XRP price and how to feel about it. </p> -->
-            </div>
-        </a>
-        <a href="/cafe-heros" class="group-card" style="--accent-500: #487ee9; --text: #000;">
-            <div class="image"><img src="/images/thumb-heros.webp" alt=""></div>
-            <div class="desc">
-                <h2>Cafe heros</h2>
-                <em>CSS animation</em>
-                <!-- <p>A series of animated hero sections from xrp.cafe.</p> -->
-            </div>
-        </a>
-        <!-- <a href="/cafe-memes" class="group-card" style="--accent-500: #9189a0; --text: #000;">
-            <div class="image"><img src="/images/thumb-.webp" alt=""></div>
-            <div class="desc">
-                <h2>Cafe memes</h2>
-                <em>Marketing</em>
-                <p>A place to catalog the memes, because they matter.</p>
-            </div>
-        </a> -->
-        <!-- <a href="/finger-painting" class="group-card" style="--accent-500: #608896; --text: #000;">
-            <div class="image"><img src="/images/thumb-finger.webp" alt=""></div>
-            <div class="desc">
-                <h2>Finger painting</h2>
-                <em>Art project</em>
-                <p>A living collection of digital appropriation and vandalism.</p>
-            </div>
-        </a> -->
-        <a href="/interaction-fun" class="group-card" style="--accent-500: #9f80d7; --text: #000;">
-            <div class="image"><img src="/images/thumb-badges.webp" alt=""></div>
-            <div class="desc">
-                <h2>Interactive bits</h2>
-                <em>Interaction examples</em>
-                <!-- <p>Animation and interactions assets.</p> -->
-            </div>
-        </a>
-        <a href="/404-game/" class="group-card" style="--accent-500: #d36275; --text: #000;">
-            <div class="image"><img src="/images/thumb-game.webp" alt=""></div>
-            <div class="desc">
-                <h2>404</h2>
-                <em>Mini game (desktop)</em>
-                <!-- <p>A basic platform game for killing time.</p> -->
-            </div>
-        </a>
-    </section>
-    <section class="is-lane" style="--accent-500: #2c48c4; --text: #fff;">
-        <div class="image"><img src="/images/ms_01.webp" alt=""></div>
-        <div class="desc">
-            <h2>Microsoft Learn</h2>
-            <em>UX, Design Systems, Rapid Prototyping</em>
-            <p>Taming a vast landscape of learning needs and goals.</p>
-            <a href="/ms-learn" class="button">Read more</a>
-        </div>
-    </section>
-</main> 
-{% include footer.html %}
+<!DOCTYPE html>
+  <meta http-equiv="refresh" content="0; url=https://diagonals.fun">
+  <title>Redirecting...</title>
+  <script>
+    window.onload = function() {
+      window.location.href = "https://diagonals.fun";
+    };
+  </script>
+</head>
+<body>
+  <p>If you are not redirected automatically, <a href="https://diagonals.fun">click here</a>.</p>
+</body>
 <script>
     const swiper = new Swiper('.swiper', {
         // Optional parameters
